@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Logged</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div> 
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <a class="navbar navbar-brand" href="">Dashboard</a>
+                <a class="navbar navbar-brand" href="">My Profile</a>
+                <a class="navbar navbar-brand" href="">Settings</a>
+              
+                <a class="navbar navbar-brand" href="">Logout</a>
+            </ul>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+        <div>
+            <h3>@@CopyRight .Net [A] @DateTime.Now.Date</h3>
+        </div>
+    </div>
+</body>
+</html>

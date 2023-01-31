@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "MyProfile";
+    Layout = "~/Views/Shared/_Logged.cshtml";
+}
+
+<h2>MyProfile</h2>
+<h4>Name: @ViewBag.InsName @ViewData["InsName"]</h4>
+<h4>Section: @ViewBag.Section</h4>
+<h4>Students: @ViewBag.Students</h4>
+<ul>
+    @foreach (var item in ViewBag.Names)
+    {
+        <li>@item</li>
+    }
+</ul>
+

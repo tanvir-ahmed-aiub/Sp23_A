@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    bool HobbiesCheck(string hobby)
+    {
+        if (Model != null && Model.Hobbies != null)
+        {
+            foreach (var item in Model.Hobbies)
+            {
+                if (item.Equals(hobby)) return true;
+            }
+        }
+        return false;
+    }
+}
+
+<h2>Register</h2>
+@Html.ValidationSummary()
+
+<form method="post">
+    Name: <input type="text" name="Name" placeholder="Name" value="@(Model ==null ? "":Model.Name)" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span> <br />
+
+    Id: <input type="text" value="@(Model==null ? "":Model.Id)" name="Id" placeholder="Id" class="form-control" />
+    @Html.ValidationMessage("Id") <br />
+    Gender: <input type="radio" name="Gender" value="Male" /> Male<input type="radio" name="Gender" value="Female" /> Female
+    <br />Profession:<br />
+    <select class="form-control" name="Profession">
+        <option selected disabled>Select</option>
+        <option>Student</option>
+        <option>Teacher</option>
+    </select>
+    Hobbies:
+    <input type="checkbox" checked="@HobbiesCheck("Games")" value="Games" name="Hobbies[]" /> Games
+    <input type="checkbox" checked="@HobbiesCheck("Sports")" value="Sports" name="Hobbies[]" /> Sports
+    <input type="checkbox" checked="@HobbiesCheck("Travelling")" value="Travelling" name="Hobbies[]" /> Travelling
+    <input type="checkbox" checked="@HobbiesCheck("Music")" value="Music" name="Hobbies[]" /> Music
+    <br />
+    Date of Birth: <input type="date" value="@(Model == null? "":Model.Dob.Date.ToString("yyyy-MM-dd"))" name="Dob" /> <br />
+    <input type="submit" value="Register" class="btn btn-success" />
+</form>

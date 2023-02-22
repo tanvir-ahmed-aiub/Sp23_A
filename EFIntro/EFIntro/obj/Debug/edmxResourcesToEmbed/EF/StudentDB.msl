@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Courses">
       <EntityTypeMapping TypeName="StudentMs_AModel.Cours">
         <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
@@ -12,11 +13,29 @@
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="StudentMs_AModel.Student">
         <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="Profession" ColumnName="Profession" />
           <ScalarProperty Name="Dob" ColumnName="Dob" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseStudents">
+      <EntityTypeMapping TypeName="StudentMs_AModel.CourseStudent">
+        <MappingFragment StoreEntitySet="CourseStudents">
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="StId" ColumnName="StId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="StudentMs_AModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

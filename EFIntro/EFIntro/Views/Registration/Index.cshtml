@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Offered Courses</h2>
+@if(TempData["Msg"] != null){
+    <span class="alert alert-danger">@TempData["Msg"]</span>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Course</th>
+            <th>Count</th>
+            <th>Enroll</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CourseStudents.Count</td>
+                <td><a class="btn btn-success" href="/Registration/Enroll/@item.Id/demo">Enroll</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

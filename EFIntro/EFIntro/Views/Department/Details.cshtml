@@ -1,0 +1,43 @@
+﻿@model EFIntro.EF.Department
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<h2>Student List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Gender</th>
+
+    </tr>
+    @foreach (var item in Model.Students)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Id</td>
+            <td>@item.Gender</td>
+        </tr>
+    }
+</table>

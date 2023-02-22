@@ -14,10 +14,21 @@ namespace EFIntro.EF
     
     public partial class Student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Student()
+        {
+            this.CourseStudents = new HashSet<CourseStudent>();
+        }
+    
         public int Id { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
         public string Profession { get; set; }
         public System.DateTime Dob { get; set; }
+        public int DeptId { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CourseStudent> CourseStudents { get; set; }
+        public virtual Department Department { get; set; }
     }
 }

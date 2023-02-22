@@ -128,8 +128,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="EF\Cours.cs">
+      <DependentUpon>StudentDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CourseStudent.cs">
+      <DependentUpon>StudentDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Department.cs">
       <DependentUpon>StudentDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Student.cs">
@@ -211,10 +221,16 @@
     <Content Include="Views\Home\Registration.cshtml" />
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Student\List.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Department\List.cshtml" />
+    <Content Include="Views\Department\Details.cshtml" />
+    <Content Include="Views\Registration\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Course\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

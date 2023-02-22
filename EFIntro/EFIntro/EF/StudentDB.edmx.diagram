@@ -6,7 +6,13 @@
     <edmx:Diagrams>
       <Diagram DiagramId="1c6c0cb74f2c4646823d56a68c2a4059" Name="Diagram1">
         <EntityTypeShape EntityType="StudentMs_AModel.Cours" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="StudentMs_AModel.Student" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentMs_AModel.Student" Width="1.5" PointX="6.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentMs_AModel.CourseStudent" Width="1.5" PointX="3.625" PointY="0.5" />
+        <EntityTypeShape EntityType="StudentMs_AModel.Department" Width="1.5" PointX="3.625" PointY="3" />
+        <AssociationConnector Association="StudentMs_AModel.FK_Courses_Departments" />
+        <AssociationConnector Association="StudentMs_AModel.FK_CourseStudents_Courses" />
+        <AssociationConnector Association="StudentMs_AModel.FK_CourseStudents_Students" />
+        <AssociationConnector Association="StudentMs_AModel.FK_Students_Departments" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -128,6 +128,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="EF\Models\Order.cs" />
+    <Compile Include="EF\Models\OrderDetails.cs" />
     <Compile Include="EF\Models\Product.cs" />
     <Compile Include="EF\PMSDb.cs" />
     <Compile Include="EF\Models\Category.cs" />
@@ -141,6 +144,22 @@
     <Compile Include="Migrations\202302200653242_ProductTableAdded.cs" />
     <Compile Include="Migrations\202302200653242_ProductTableAdded.designer.cs">
       <DependentUpon>202302200653242_ProductTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302270533482_OrderTableCreated.cs" />
+    <Compile Include="Migrations\202302270533482_OrderTableCreated.designer.cs">
+      <DependentUpon>202302270533482_OrderTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302270550020_FKPKOrderOrderDetailsProducts.cs" />
+    <Compile Include="Migrations\202302270550020_FKPKOrderOrderDetailsProducts.designer.cs">
+      <DependentUpon>202302270550020_FKPKOrderOrderDetailsProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302270652079_OrderModified.cs" />
+    <Compile Include="Migrations\202302270652079_OrderModified.designer.cs">
+      <DependentUpon>202302270652079_OrderModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302270656088_OrderDetails.cs" />
+    <Compile Include="Migrations\202302270656088_OrderDetails.designer.cs">
+      <DependentUpon>202302270656088_OrderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,6 +200,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\ShowCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -205,6 +226,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302200653242_ProductTableAdded.resx">
       <DependentUpon>202302200653242_ProductTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302270533482_OrderTableCreated.resx">
+      <DependentUpon>202302270533482_OrderTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302270550020_FKPKOrderOrderDetailsProducts.resx">
+      <DependentUpon>202302270550020_FKPKOrderOrderDetailsProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302270652079_OrderModified.resx">
+      <DependentUpon>202302270652079_OrderModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302270656088_OrderDetails.resx">
+      <DependentUpon>202302270656088_OrderDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

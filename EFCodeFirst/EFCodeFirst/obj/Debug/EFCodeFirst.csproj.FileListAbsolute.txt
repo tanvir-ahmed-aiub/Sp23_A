@@ -84,3 +84,7 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFir
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.CategoryTableandDbCreation.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.GenerateResource.cache
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.ProductTableAdded.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.OrderTableCreated.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.FKPKOrderOrderDetailsProducts.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.OrderModified.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.OrderDetails.resources

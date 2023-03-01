@@ -23,7 +23,12 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li><a href="/Order/ShowCart">My Cart</a></li>
+                    @if (Session["user"] != null)
+                    {
+                        <li><a href="/Order/Index">Products</a></li>
+                        <li><a href="/Order/ShowCart">My Cart</a></li>
+                    }
+
                 </ul>
             </div>
         </div>

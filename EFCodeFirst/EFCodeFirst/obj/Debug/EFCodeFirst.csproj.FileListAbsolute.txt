@@ -88,3 +88,4 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFir
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.FKPKOrderOrderDetailsProducts.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.OrderModified.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.OrderDetails.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.Migrations.OrderUserPkFKOrderTable.resources

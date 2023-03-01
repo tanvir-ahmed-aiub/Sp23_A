@@ -1,0 +1,44 @@
+﻿@model EFCodeFirst.EF.Models.Order
+@{
+    ViewBag.Title = "OrderDetails";
+}
+
+<h2>OrderDetails</h2>
+<div>
+    <h1>Ordered By: @Model.OrderedBy.Name</h1>
+    <h2>Order Date: @Model.OrderDate</h2>
+    <h4>Status: @Model.Status</h4>
+</div>
+<h3>Products</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <td>Total</td>
+    </tr>
+    @{
+        int sum = 0;
+     }
+    
+
+    @foreach (var od in Model.OrderDetails)
+    {
+        
+    var itemtotal = od.Price * od.Qty;
+    sum += itemtotal;
+       
+        <tr>
+            <td>@od.Product.Name</td>
+            <td>@od.Price</td>
+            <td>@od.Qty</td>
+            <td>@itemtotal</td>
+        </tr>
+    }
+    <tr>
+        <th align="center" colspan="3">Total</th>
+        <th>@sum</th>
+    </tr>
+</table>
+
+

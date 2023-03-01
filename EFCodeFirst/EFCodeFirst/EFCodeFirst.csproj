@@ -127,11 +127,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth\AdminAccess.cs" />
+    <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="EF\Models\Order.cs" />
     <Compile Include="EF\Models\OrderDetails.cs" />
     <Compile Include="EF\Models\Product.cs" />
+    <Compile Include="EF\Models\User.cs" />
     <Compile Include="EF\PMSDb.cs" />
     <Compile Include="EF\Models\Category.cs" />
     <Compile Include="Global.asax.cs">
@@ -161,7 +164,12 @@
     <Compile Include="Migrations\202302270656088_OrderDetails.designer.cs">
       <DependentUpon>202302270656088_OrderDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303010451467_OrderUserPkFKOrderTable.cs" />
+    <Compile Include="Migrations\202303010451467_OrderUserPkFKOrderTable.designer.cs">
+      <DependentUpon>202303010451467_OrderUserPkFKOrderTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -202,10 +210,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Order\ShowCart.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Order\AllOrders.cshtml" />
+    <Content Include="Views\Order\OrderDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -238,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302270656088_OrderDetails.resx">
       <DependentUpon>202302270656088_OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303010451467_OrderUserPkFKOrderTable.resx">
+      <DependentUpon>202303010451467_OrderUserPkFKOrderTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

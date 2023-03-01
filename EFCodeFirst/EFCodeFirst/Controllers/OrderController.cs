@@ -1,4 +1,5 @@
-﻿using EFCodeFirst.EF;
+﻿using EFCodeFirst.Auth;
+using EFCodeFirst.EF;
 using EFCodeFirst.EF.Models;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,24 @@ using System.Web.Mvc;
 
 namespace EFCodeFirst.Controllers
 {
+    [Logged]
     public class OrderController : Controller
     {
+        [AdminAccess]
+        public ActionResult AllOrders() {
+            PMSDb db = new PMSDb();
+            return View(db.Orders.ToList());
+        }
         // GET: Order
+        //[AllowAnonymous]
         public ActionResult Index()
         {
-            PMSDb db = new PMSDb();
-            return View(db.Products.ToList());
+            //if (Session["user"] != null)
+            //{
+                PMSDb db = new PMSDb();
+                return View(db.Products.Take(10).ToList());
+            //}
+           //return RedirectToAction("Login","Home");
         }
         public ActionResult AddCart(int id) {
             PMSDb db = new PMSDb();
@@ -83,10 +95,19 @@ namespace EFCodeFirst.Controllers
             }
             return false;
         }
-
+       
         public ActionResult ShowCart() {
-            var products = (List<Product>)Session["cart"];
-            return View(products);
+           
+                var products = (List<Product>)Session["cart"];
+                return View(products);
+            
+            
+        }
+        [AdminAccess]
+        public ActionResult OrderDetails(int id) {
+            PMSDb db = new PMSDb();
+            var order = db.Orders.Find(id);
+            return View(order);
         }
     }
 }

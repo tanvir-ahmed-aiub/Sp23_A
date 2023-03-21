@@ -1,5 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
+@{ 
+    var user = (EFCodeFirst.EF.Models.User)Session["user"];
+}
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +30,9 @@
                     {
                         <li><a href="/Order/Index">Products</a></li>
                         <li><a href="/Order/ShowCart">My Cart</a></li>
+                    }
+                    @if(user != null && user.Type.Equals("admin")){
+                    <li><a href="/Order/AllOrders">All Orders</a></li>
                     }
 
                 </ul>

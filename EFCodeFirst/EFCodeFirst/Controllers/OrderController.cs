@@ -109,5 +109,33 @@ namespace EFCodeFirst.Controllers
             var order = db.Orders.Find(id);
             return View(order);
         }
+        [AdminAccess]
+        public ActionResult Process(int id) {
+            PMSDb db = new PMSDb();
+            var order = db.Orders.Find(id);
+            foreach (var od in order.OrderDetails) { 
+                var p = db.Products.Find(od.PId);
+                p.Qty -= od.Qty;
+            }
+
+            order.Status = "Processing";
+            db.SaveChanges();
+            TempData["Msg"] = "Ordered Placed Succcessfully";
+
+            return RedirectToAction("Index");
+
+
+
+        }
+        [AdminAccess]
+        public ActionResult Cancel(int id) {
+            PMSDb db = new PMSDb();
+            var order = db.Orders.Find(id);
+            order.Status = "Cancelled By Admin";
+            db.SaveChanges();
+            TempData["Msg"] = "Ordered Cancelled";
+
+            return RedirectToAction("Index");
+        }
     }
 }

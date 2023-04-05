@@ -1,4 +1,5 @@
-﻿using DAL.Models;
+﻿using DAL.Interfaces;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class EmployeeRepo
+    internal class EmployeeRepo : Repo, IRepo<Employee, int, Employee>
     {
-        static EmpContext empContext;
+        /*static EmpContext empContext;
         static EmployeeRepo() { 
             empContext = new EmpContext();
         }
@@ -38,8 +39,30 @@ namespace DAL.Repos
             var exemp = Get(id);
             empContext.Employees.Remove(exemp);
             return empContext.SaveChanges() > 0;
+        }*/
+        public bool Delete(int id)
+        {
+            throw new NotImplementedException();
         }
-        
 
+        public List<Employee> Get()
+        {
+            return db.Employees.ToList();
+        }
+
+        public Employee Get(int id)
+        {
+            return db.Employees.Find(id);
+        }
+
+        public Employee Insert(Employee obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Employee Update(Employee obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

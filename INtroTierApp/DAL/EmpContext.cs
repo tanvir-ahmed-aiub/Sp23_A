@@ -11,5 +11,6 @@ namespace DAL
     public class EmpContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 }

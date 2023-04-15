@@ -13,3 +13,5 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\DAL\obj\Debug\DAL.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\DAL\obj\Debug\DAL.Migrations.InitDb.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\DAL\obj\Debug\DAL.Migrations.CourseTableAdded.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\DAL\obj\Debug\DAL.Migrations.UsertableAdded.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\DAL\obj\Debug\DAL.Migrations.UsertableAdded2.resources

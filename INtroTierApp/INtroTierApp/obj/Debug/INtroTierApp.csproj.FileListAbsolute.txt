@@ -74,3 +74,6 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\obj\Debug\INtroTi
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\obj\Debug\INtroTierApp.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\bin\EntityFramework.SqlServer.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\bin\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\bin\System.Web.Cors.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\bin\System.Web.Http.Cors.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\INtroTierApp\INtroTierApp\bin\System.Web.Http.Cors.xml

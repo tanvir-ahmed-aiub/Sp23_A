@@ -49,10 +49,7 @@ namespace BLL.Services
          static List<EmployeeDTO> Convert(List<Employee> employees) {
             var data = new List<EmployeeDTO>();
             foreach (var employee in employees) {
-                data.Add(new EmployeeDTO() { 
-                    Id = employee.Id,
-                    Name = employee.Name
-                });
+                data.Add(Convert(employee));
             }
             return data;
 

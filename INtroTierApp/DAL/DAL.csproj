@@ -51,7 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EmpContext.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202303250531458_InitDb.cs" />
     <Compile Include="Migrations\202303250531458_InitDb.designer.cs">
       <DependentUpon>202303250531458_InitDb.cs</DependentUpon>
@@ -60,11 +63,24 @@
     <Compile Include="Migrations\202304050522152_CourseTableAdded.designer.cs">
       <DependentUpon>202304050522152_CourseTableAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304100558548_UsertableAdded.cs" />
+    <Compile Include="Migrations\202304100558548_UsertableAdded.designer.cs">
+      <DependentUpon>202304100558548_UsertableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304100602060_UsertableAdded2.cs" />
+    <Compile Include="Migrations\202304100602060_UsertableAdded2.designer.cs">
+      <DependentUpon>202304100602060_UsertableAdded2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\CourseRepo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
+    <Compile Include="Repos\EmployeeRepoV2.cs" />
+    <Compile Include="Repos\LoginRepo.cs" />
+    <Compile Include="Repos\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202303250531458_InitDb.resx">
@@ -72,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304050522152_CourseTableAdded.resx">
       <DependentUpon>202304050522152_CourseTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100558548_UsertableAdded.resx">
+      <DependentUpon>202304100558548_UsertableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100602060_UsertableAdded2.resx">
+      <DependentUpon>202304100602060_UsertableAdded2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
